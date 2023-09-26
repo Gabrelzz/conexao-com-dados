@@ -1,0 +1,8 @@
+<?php
+
+$nome = 'Carnes';
+$sqlInserir = "INSERT INTO categoria (nome) VALUES (:nome)";
+$stmt = $conexao->prepare($sqlInserir);
+$stmt->bindParam(':nome', $nome);
+$stmt->execute();
+echo "Inserção feita com sucesso";
